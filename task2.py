@@ -8,7 +8,7 @@ def isfloat(arg):
 
 
 try:
-    F = open("task2.txt", "r")
+    F = open("task2.txt", "r", encoding="utf-8")
     min = F.readline()
     F.seek(0)
 except FileNotFoundError as FNF:
