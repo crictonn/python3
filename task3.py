@@ -3,6 +3,7 @@ try:
 except FileNotFoundError as FNF:
     print("Ошибка открытия файла")
 else:
+    d = {}
     for k in F:
         k = k.replace("(лаб)", "")
         k = k.replace("(пр)", "")
@@ -12,4 +13,6 @@ else:
         for i in range(len(a)):
             if a[i].isdigit():
                 sum += int(a[i])
-        print(a[0], " ", sum)
+        a[0] = a[0].replace(":", "")
+        d[a[0]] = sum
+print(d)
