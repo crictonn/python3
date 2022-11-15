@@ -5,9 +5,9 @@ except FileNotFoundError as FNF:
 else:
     d = {}
     for k in F:
-        k = k.replace("(лаб)", "")
-        k = k.replace("(пр)", "")
-        k = k.replace("(л)", "")
+        k = k.replace("(лаб)", " ")
+        k = k.replace("(пр)", " ")
+        k = k.replace("(л)", " ")
         a = k.split()
         sum = 0
         for i in range(len(a)):
